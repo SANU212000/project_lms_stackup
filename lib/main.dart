@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:lms_project/SCREEN/home_page/home_page.dart';
-import 'package:lms_project/widgets/app_colour.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:lms_project/helpers/app_colour.dart';
+import 'package:lms_project/screen/login_screen/login_screen.dart';
+import 'package:lms_project/screen/splash_screen/splashs_screen.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(ProviderScope(child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -49,7 +51,7 @@ class MyApp extends StatelessWidget {
         ),
       ),
 
-      home: HomePage(),
+      home: SplashScreen(),
     );
   }
 }

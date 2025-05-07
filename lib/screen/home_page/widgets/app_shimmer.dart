@@ -8,7 +8,7 @@ class ShimmerProfilePicture extends StatelessWidget {
   const ShimmerProfilePicture({
     super.key,
     required this.imageUrl,
-    this.size = 50.0,
+    this.size = 55.0,
   });
 
   @override

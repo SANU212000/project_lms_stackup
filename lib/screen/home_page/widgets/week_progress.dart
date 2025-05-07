@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:lms_project/widgets/app_colour.dart';
-import 'package:lms_project/widgets/app_text_styles.dart';
+import 'package:lms_project/helpers/app_colour.dart';
+import 'package:lms_project/helpers/app_text_styles.dart';
 import 'package:remixicon/remixicon.dart';
 
 class WeekProgress extends StatelessWidget {
@@ -9,11 +9,11 @@ class WeekProgress extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(8.0),
+      padding: const EdgeInsets.symmetric(horizontal: 8.0),
       child: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
-          color: Colors.white,
+          color: AppColors.softIvory,
         ),
 
         child: Column(
@@ -34,8 +34,6 @@ class WeekProgress extends StatelessWidget {
                 ],
               ),
             ),
-
-            //week date
             WeeklyTracker(markedDays: [true, false, true, true, false, true]),
           ],
         ),
@@ -64,7 +62,7 @@ class WeeklyTracker extends StatelessWidget {
           final isMarked = isPastOrToday ? markedDays[index] : null;
 
           return Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 2.0),
+            padding: const EdgeInsets.symmetric(horizontal: 2.0, vertical: 5),
             child: Column(
               children: [
                 Container(
@@ -106,7 +104,7 @@ class WeeklyTracker extends StatelessWidget {
                   ),
                 ),
 
-                Text(days[index], style: AppTextStyles.urbanistheading1black),
+                Text(days[index], style: AppTextStyles.urbanistbodyblack),
               ],
             ),
           );
